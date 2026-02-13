@@ -1,7 +1,179 @@
 <!DOCTYPE html>
-<html>
-<body style="font-family: sans-serif; text-align: center; padding: 50px;">
-  <h1>Hi, I'm Reekolicious 👋</h1>
-  <p>Welcome to my corner of the internet!</p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reekolicious Outdoors</title>
+  <style>
+    :root {
+      --pine: #1f3b2d;
+      --moss: #385a3c;
+      --sand: #d9c8a5;
+      --sun: #f4b25f;
+      --mist: rgba(238, 245, 236, 0.86);
+      --ink: #18231b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Trebuchet MS", "Gill Sans", sans-serif;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, rgba(14, 34, 25, 0.5), rgba(14, 34, 25, 0.72)),
+        url("https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1800&q=80")
+          center/cover no-repeat fixed;
+    }
+
+    .page {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 2rem 1.2rem 3rem;
+    }
+
+    .hero {
+      background: var(--mist);
+      border: 3px solid rgba(31, 59, 45, 0.35);
+      border-radius: 18px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(3px);
+    }
+
+    h1 {
+      margin: 0 0 0.3rem;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      letter-spacing: 0.03em;
+      color: var(--pine);
+      text-transform: uppercase;
+    }
+
+    .tagline {
+      margin: 0;
+      font-size: 1.15rem;
+      color: #2f4c36;
+      font-weight: 700;
+    }
+
+    .story {
+      margin-top: 1.4rem;
+      font-size: 1.04rem;
+      line-height: 1.7;
+      background: rgba(255, 255, 255, 0.78);
+      border-left: 6px solid var(--sun);
+      padding: 1rem 1.1rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .card {
+      background: rgba(245, 245, 235, 0.95);
+      border: 1px solid rgba(24, 35, 27, 0.2);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      transform: translateY(8px);
+      animation: rise 700ms ease forwards;
+    }
+
+    .card:nth-child(2) {
+      animation-delay: 120ms;
+    }
+
+    .card:nth-child(3) {
+      animation-delay: 240ms;
+    }
+
+    .card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card h2 {
+      margin: 0.7rem 0.8rem 0.4rem;
+      font-size: 1.2rem;
+      color: var(--moss);
+    }
+
+    .card p {
+      margin: 0 0.8rem 1rem;
+      line-height: 1.55;
+    }
+
+    .badge {
+      display: inline-block;
+      margin: 0 0.8rem 0.7rem;
+      padding: 0.28rem 0.6rem;
+      border-radius: 999px;
+      background: var(--pine);
+      color: #f7f3e8;
+      font-size: 0.84rem;
+      letter-spacing: 0.03em;
+    }
+
+    @keyframes rise {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 720px) {
+      .hero {
+        padding: 1.4rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>Reekolicious Outdoors</h1>
+      <p class="tagline">What a LEGEND</p>
+      <div class="story">
+        <p>
+          Reekolicious is known around campfire circles as the hunter who climbed Granite Hollow before dawn,
+          tracked the wind by hand, and brought home a towering twelve-point buck with antlers like a crown of
+          oak branches. The story says the buck stepped out at first light, and one calm shot sealed a record
+          season that fed families all winter.
+        </p>
+        <p>
+          On the coast, the legend keeps growing. In one tide cycle, Reekolicious landed a hard-charging shark and a
+          heavyweight sea trout while working tide lines through rolling marsh grass and copper-colored water.
+          Those catches became local dock talk and earned the title: "Captain of the Coast!"
+        </p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <img src="images/deer.jpg" alt="Large twelve-point deer in the forest">
+          <h2>Grand Deer Hunt</h2>
+          <span class="badge">12-Point Trophy Buck</span>
+          <p>A steep-ridge pursuit, perfect wind read, and a clean harvest turned this hunt into a mountain classic.</p>
+        </article>
+        <article class="card">
+          <img src="images/shark.jpg" alt="Shark in open water with no people">
+          <h2>Shark Showdown</h2>
+          <span class="badge">Coastal Catch</span>
+          <p>The shark slammed the line in open water and turned a calm morning into a full battle at the rail.</p>
+        </article>
+        <article class="card">
+          <img src="images/sea-trout.jpg" alt="Single large sea trout with no people">
+          <h2>Sea Trout Triumph</h2>
+          <span class="badge">Coastal Breakwater Strike</span>
+          <p>These tasty trout were landed on a Berkley shrimp bait.</p>
+        </article>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
